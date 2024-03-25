@@ -1,3 +1,13 @@
-# This file will contain the required providers for your module.
-# Each Terraform module must declare which providers it requires, so that Terraform
-# can install and use them.
+# Configure the minimum required providers supported
+terraform {
+
+  required_version = ">=1.6.0"
+
+  required_providers {
+    github = {
+      source  = "integrations/github"
+      version = "~>5.44"
+    }
+  }
+
+}
